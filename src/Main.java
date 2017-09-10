@@ -1,5 +1,5 @@
 import java.util.Random;
-        import java.util.Scanner;
+import java.util.Scanner;
 
 public class Main {
 
@@ -20,7 +20,6 @@ public class Main {
         int potionhealamount = 40;
         int potiondropchance = 60;
 
-
         boolean running = true;
 
         System.out.println("Welcome to the game!" + "Would you like to play y/n");
@@ -29,7 +28,9 @@ public class Main {
             System.out.println("BYE");
             return;
         }
+
         if (input.equals("y")) {
+            //Starts while loop
             TEXTGAME:
             while (running) {
                 System.out.println("----------------------------------------------------");
@@ -59,6 +60,12 @@ public class Main {
                         System.out.println("However you took " + damageTaken + " HP");
                         return;
                     }
+                    /* DO TO LIST:
+                    Add more to game
+                    make more stuff to do and make it more complex/fun.
+                    Also push to github
+                     */
+
                 }
                 break;
             }
