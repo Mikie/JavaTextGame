@@ -53,7 +53,8 @@ public class Main {
                     String inp = in.nextLine();
                     if (inp.equals("1")) {
                         System.out.println("You ran away like a pussy!");
-                        return;
+                        System.out.println("THE END");
+                        break;
                     }
                     else if (inp.equals("2")){
                         int damageGiven = rand.nextInt(attackdamage);
@@ -62,20 +63,18 @@ public class Main {
                         health -= damageTaken;
                         System.out.println("You damaged " + enemy + " for " + damageGiven + " HP");
                         System.out.println("However you took " + damageTaken + " HP");
-                        return;
+                        continue;
                     }else if (inp.equals("3")){
                         String teammate = teammates[rand.nextInt(teammates.length)];
                         System.out.println("You have called for back up and your teammate " + teammate);
                     }
-                    /* DO TO LIST:
-                    Add more to game
-                    make more stuff to do and make it more complex/fun.
-                    Also push to github
-                     */
-
                 }
                 break;
             }
         }
     }
 }
+                    /* DO TO LIST:
+                    Add more to game
+                    make more stuff to do and make it more complex/fun.
+                     */
