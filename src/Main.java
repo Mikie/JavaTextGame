@@ -1,3 +1,4 @@
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,6 +20,9 @@ public class Main {
         int healthpotionsnum = 5;
         int potionhealamount = 40;
         int potiondropchance = 60;
+        String[] teammates = {"Bob", "DJ", "Narwhal", "James", "Sean"};
+
+
 
         boolean running = true;
 
@@ -39,7 +43,7 @@ public class Main {
                 System.out.println("A while " + enemy + " Has showed up!");
 
 
-                while (maxhealth > 0) {
+                while(maxhealth > 0) {
                     System.out.println("Your HP: " + health);
                     System.out.println("Enemy Max Health: " + maxhealth);
                     System.out.println("What would you like to do?");
@@ -59,6 +63,9 @@ public class Main {
                         System.out.println("You damaged " + enemy + " for " + damageGiven + " HP");
                         System.out.println("However you took " + damageTaken + " HP");
                         return;
+                    }else if (inp.equals("3")){
+                        String teammate = teammates[rand.nextInt(teammates.length)];
+                        System.out.println("You have called for back up and your teammate " + teammate);
                     }
                     /* DO TO LIST:
                     Add more to game
