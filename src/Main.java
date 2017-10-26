@@ -12,17 +12,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Main extends Application implements EventHandler<ActionEvent> {
-
-
-    //TODO move stuff over here
-
-
-    Stage mainWindow;
-    Stage secondWindow;
-
-    Button confirmationButton;
-
-    Label inputLabel;
+    private Button confirmationButton;
+    private Label inputLabel;
 
     public static void main(String[] args) {
         launch(args);
@@ -30,8 +21,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        mainWindow = primaryStage;
-        mainWindow.setTitle("TextGame");
+        primaryStage.setTitle("TextGame");
 
         //Input and labels
         TextField userInput = new TextField();
@@ -50,8 +40,8 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         inputLabel.textProperty().bind(userInput.textProperty());
 
         Scene scene = new Scene(vBox, 300, 200);
-        mainWindow.setScene(scene);
-        mainWindow.show();
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     @Override
@@ -61,7 +51,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
             //do your thing, fiddle about with it.
             //i've made a simple second window to display your input :)
 
-            secondWindow = new Stage();
+            Stage secondWindow = new Stage();
 
             Label memes = new Label("Here was your input: " + userInput);
             VBox box = new VBox(20, memes);

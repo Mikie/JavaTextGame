@@ -38,7 +38,6 @@ public class Game {
 
         if (input.equals("y")) {
             //Starts while loop
-            TEXTGAME:
             while (running) {
                 System.out.println("----------------------------------------------------");
                 int enemyhealth = rand.nextInt();
